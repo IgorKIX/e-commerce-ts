@@ -1,4 +1,4 @@
-import Products from "./Products";
+import ProductsList from "./Products";
 import Navbar from "./Navbar";
 
-export {Products, Navbar};
+export {ProductsList, Navbar};

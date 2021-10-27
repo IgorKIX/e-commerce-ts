@@ -7,7 +7,11 @@ import {AppBar, Badge, IconButton, Toolbar, Typography} from "@material-ui/core"
 import logo from "../../assets/shop.png";
 import {ShoppingCart} from "@material-ui/icons";
 
-export const Navbar = () => {
+interface NavbarProps {
+    totalItems: number
+}
+
+export const Navbar = ({totalItems}: NavbarProps) => {
     const classes = useStyles();
     return (
         <>
@@ -20,7 +24,7 @@ export const Navbar = () => {
                     <div className={classes.grow}/>
                     <div>
                         <IconButton aria-label="Show cart items" color="inherit">
-                            <Badge badgeContent={2} color="secondary">
+                            <Badge badgeContent={totalItems} color="secondary">
                                 <ShoppingCart/>
                             </Badge>
                         </IconButton>
